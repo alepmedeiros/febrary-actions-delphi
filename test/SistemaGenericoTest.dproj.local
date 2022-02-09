@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2022/02/08 10:43:44.000.928,=C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2022/02/08 10:43:56.000.403,C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\SistemaGenericoTest.dproj</Transaction>
+    <Transaction>2022/02/08 10:44:41.000.895,C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\MyRepository\febrary-actions-delphi\test\SistemaGenerico.test.pas</Transaction>
+    <Transaction>2022/02/08 10:44:50.000.326,C:\Users\Criacao\Documents\Embarcadero\Studio\Projects\SistemaGenericoTest.dproj=C:\MyRepository\febrary-actions-delphi\test\SistemaGenericoTest.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
