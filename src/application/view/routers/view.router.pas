@@ -3,7 +3,10 @@ unit view.router;
 interface
 
 uses
-  Router4D, view.home, view.ListaClientes;
+  Router4D,
+  view.home,
+  view.ListaClientes,
+  view.CadastroCliente;
 
 type
   TRouters = class
@@ -14,7 +17,7 @@ type
   end;
 
 var
-  Routers : TRouters;
+  Routers: TRouters;
 
 implementation
 
@@ -22,8 +25,9 @@ implementation
 
 constructor TRouters.Create;
 begin
-  TRouter4D.Switch.Router('Home', TPageHome);
-  TRouter4D.Switch.Router('Lista', TPageListaClientes);
+  TRouter4D.Switch.router('Home', TPageHome);
+  TRouter4D.Switch.router('Lista', TPageListaClientes);
+  TRouter4D.Switch.router('Cadastrar', TPageCadastroCliente);
 end;
 
 destructor TRouters.Destroy;
@@ -33,9 +37,11 @@ begin
 end;
 
 initialization
-  Routers := TRouters.Create;
+
+Routers := TRouters.Create;
 
 finalization
-  Routers.DisposeOf;
+
+Routers.DisposeOf;
 
 end.

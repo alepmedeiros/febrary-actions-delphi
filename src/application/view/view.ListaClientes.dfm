@@ -1081,6 +1081,7 @@ object PageListaClientes: TPageListaClientes
             Height = 63
             Align = alClient
             Flat = True
+            OnClick = btnNovoClick
             ExplicitLeft = 8
             ExplicitTop = 40
             ExplicitWidth = 23

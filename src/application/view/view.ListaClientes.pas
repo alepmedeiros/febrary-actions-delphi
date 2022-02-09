@@ -19,6 +19,7 @@ uses
   Vcl.Imaging.pngimage,
   Vcl.StdCtrls,
   Vcl.Buttons,
+  Router4D,
   Router4D.Interfaces;
 
 type
@@ -41,6 +42,7 @@ type
     btnpesquisar: TSpeedButton;
     edtpesquisa: TEdit;
     procedure edtpesquisaClick(Sender: TObject);
+    procedure btnNovoClick(Sender: TObject);
   private
     procedure AjusteEdit;
   public
@@ -65,6 +67,11 @@ begin
   end;
   edtpesquisa.Text := '';
   edtpesquisa.Font.Color := clBlack;
+end;
+
+procedure TPageListaClientes.btnNovoClick(Sender: TObject);
+begin
+  TRouter4D.Link.&To('Cadastrar');
 end;
 
 procedure TPageListaClientes.edtpesquisaClick(Sender: TObject);
