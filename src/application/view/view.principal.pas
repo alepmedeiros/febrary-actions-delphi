@@ -11,12 +11,21 @@ uses
   Vcl.Graphics,
   Vcl.Controls,
   Vcl.Forms,
-  Vcl.Dialogs, Vcl.CategoryButtons, Vcl.WinXCtrls, Vcl.StdCtrls,
-  Vcl.Imaging.pngimage, Vcl.ExtCtrls, System.Actions, Vcl.ActnList,
-  System.ImageList, Vcl.ImgList;
+  Vcl.Dialogs,
+  Vcl.CategoryButtons,
+  Vcl.WinXCtrls,
+  Vcl.StdCtrls,
+  Vcl.Imaging.pngimage,
+  Vcl.ExtCtrls,
+  System.Actions,
+  Vcl.ActnList,
+  System.ImageList,
+  Vcl.ImgList,
+  Router4D,
+  view.home;
 
 type
-  Tviewprincipal = class(TForm)
+  TPageIndex = class(TForm)
     pnlToolbar: TPanel;
     imgMenu: TImage;
     imlIcons: TImageList;
@@ -25,11 +34,13 @@ type
     actCadastro: TAction;
     SV: TSplitView;
     catMenuItems: TCategoryButtons;
-    Panel1: TPanel;
+    pnlContainer: TPanel;
     procedure imgMenuClick(Sender: TObject);
     procedure SVClosed(Sender: TObject);
     procedure SVOpened(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure actCadastroExecute(Sender: TObject);
+    procedure actHomeExecute(Sender: TObject);
   private
     { Private declarations }
   public
@@ -37,18 +48,34 @@ type
   end;
 
 var
-  viewprincipal: Tviewprincipal;
+  PageIndex: TPageIndex;
 
 implementation
 
 {$R *.dfm}
 
-procedure Tviewprincipal.FormCreate(Sender: TObject);
+procedure TPageIndex.actCadastroExecute(Sender: TObject);
 begin
-catMenuItems.ButtonOptions := catMenuItems.ButtonOptions - [boShowCaptions];
+  TRouter4D.Link.&To('Lista');
 end;
 
-procedure Tviewprincipal.imgMenuClick(Sender: TObject);
+procedure TPageIndex.actHomeExecute(Sender: TObject);
+begin
+  TRouter4D.Link.&To('Home');
+end;
+
+procedure TPageIndex.FormCreate(Sender: TObject);
+begin
+  TRouter4D.Render<TPageHome>.SetElement(pnlContainer, pnlContainer);
+  catMenuItems.ButtonOptions := catMenuItems.ButtonOptions - [boShowCaptions];
+
+  Self.Constraints.MaxHeight := self.Height;
+  Self.Constraints.MinHeight := Self.Height;
+  Self.Constraints.MaxWidth := Self.Width;
+  Self.Constraints.MinWidth := Self.Width;
+end;
+
+procedure TPageIndex.imgMenuClick(Sender: TObject);
 begin
   if SV.Opened then
     SV.Close
@@ -56,14 +83,14 @@ begin
     SV.Open;
 end;
 
-procedure Tviewprincipal.SVClosed(Sender: TObject);
+procedure TPageIndex.SVClosed(Sender: TObject);
 begin
   catMenuItems.ButtonOptions := catMenuItems.ButtonOptions - [boShowCaptions];
   if SV.CloseStyle = svcCompact then
     catMenuItems.Width := SV.CompactWidth;
 end;
 
-procedure Tviewprincipal.SVOpened(Sender: TObject);
+procedure TPageIndex.SVOpened(Sender: TObject);
 begin
   catMenuItems.ButtonOptions := catMenuItems.ButtonOptions + [boShowCaptions];
   catMenuItems.Width := SV.OpenedWidth;

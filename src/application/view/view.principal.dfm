@@ -1,6 +1,7 @@
-object viewprincipal: Tviewprincipal
+object PageIndex: TPageIndex
   Left = 0
   Top = 0
+  BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'Sistema Generico'
   ClientHeight = 634
   ClientWidth = 943
@@ -11,6 +12,7 @@ object viewprincipal: Tviewprincipal
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   OnCreate = FormCreate
   DesignSize = (
     943
@@ -46,7 +48,7 @@ object viewprincipal: Tviewprincipal
       OnClick = imgMenuClick
     end
   end
-  object Panel1: TPanel
+  object pnlContainer: TPanel
     Left = 50
     Top = 50
     Width = 893
@@ -1186,10 +1188,12 @@ object viewprincipal: Tviewprincipal
     object actHome: TAction
       Caption = 'Home'
       ImageIndex = 1
+      OnExecute = actHomeExecute
     end
     object actCadastro: TAction
       Caption = 'Cadastro'
       ImageIndex = 2
+      OnExecute = actCadastroExecute
     end
   end
 end
