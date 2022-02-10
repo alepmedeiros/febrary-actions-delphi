@@ -1,4 +1,4 @@
-unit view.CadastroCliente;
+unit page.Cadastro;
 
 interface
 
@@ -17,7 +17,7 @@ uses
   Router4D.Interfaces,
   Vcl.Buttons,
   Vcl.Imaging.pngimage,
-  Vcl.Imaging.jpeg;
+  Vcl.Imaging.jpeg, Vcl.WinXPanels, Vcl.StdCtrls, Vcl.DBCtrls, Vcl.ComCtrls;
 
 type
   TPageCadastroCliente = class(TForm, iRouter4DComponent)
@@ -30,10 +30,41 @@ type
     Image2: TImage;
     btnSalvar: TSpeedButton;
     btnCancelar: TSpeedButton;
-    pnlCadastros: TFlowPanel;
+    pnlLeftContainer: TPanel;
     pnlImgUser: TPanel;
     imgNouser: TImage;
-    pnlLeftContainer: TPanel;
+    btnBuscarImagem: TSpeedButton;
+    pnlCadastro: TStackPanel;
+    Panel1: TPanel;
+    StackPanel1: TStackPanel;
+    StackPanel2: TStackPanel;
+    Label1: TLabel;
+    edtNome: TEdit;
+    Label2: TLabel;
+    edtNascimento: TDateTimePicker;
+    Panel2: TPanel;
+    StackPanel3: TStackPanel;
+    StackPanel4: TStackPanel;
+    Label3: TLabel;
+    edtLogradouro: TEdit;
+    Label4: TLabel;
+    edtNumero: TEdit;
+    Panel3: TPanel;
+    StackPanel5: TStackPanel;
+    StackPanel6: TStackPanel;
+    Label5: TLabel;
+    Label6: TLabel;
+    edtCep: TEdit;
+    edtCidade: TEdit;
+    StackPanel7: TStackPanel;
+    Label7: TLabel;
+    edtComplemento: TEdit;
+    StackPanel8: TStackPanel;
+    Label8: TLabel;
+    edtBairro: TEdit;
+    StackPanel9: TStackPanel;
+    Label9: TLabel;
+    cbUf: TComboBox;
     procedure btnCancelarClick(Sender: TObject);
   private
     { Private declarations }

@@ -84,6 +84,8 @@
         <DCC_RemoteDebug>false</DCC_RemoteDebug>
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
@@ -99,23 +101,28 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="view\view.principal.pas">
-            <Form>PageIndex</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="view\routers\view.router.pas"/>
-        <DCCReference Include="view\view.home.pas">
-            <Form>PageHome</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="view\view.ListaClientes.pas">
-            <Form>PageListaClientes</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
-        <DCCReference Include="view\view.CadastroCliente.pas">
+        <DCCReference Include="src\presentation\pages\page.Cadastro.pas">
             <Form>PageCadastroCliente</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="src\presentation\pages\page.home.pas">
+            <Form>PageHome</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="src\presentation\pages\page.Lista.pas">
+            <Form>PageListaClientes</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="src\presentation\pages\page.index.pas">
+            <Form>PageIndex</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="src\main\routers\router.pas"/>
+        <DCCReference Include="src\domain\models\model.pessoa.pas"/>
+        <DCCReference Include="src\domain\usecase\pessoa\usecase.addpessoa.pas"/>
+        <DCCReference Include="src\domain\usecase\pessoa\usecase.getAllPessoa.pas"/>
+        <DCCReference Include="src\domain\usecase\pessoa\usecase.getPessoa.pas"/>
+        <DCCReference Include="src\domain\usecase\pessoa\usecase.savePessoa.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -136,6 +143,10 @@
                 <Source>
                     <Source Name="MainSource">sistemagenerico.dpr</Source>
                 </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k270.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp270.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
             </Delphi.Personality>
             <Deployment Version="3">
                 <DeployFile LocalName="Win32\Debug\sistemagenerico.exe" Configuration="Debug" Class="ProjectOutput">

@@ -9,12 +9,12 @@ object PageCadastroCliente: TPageCadastroCliente
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -16
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
   PixelsPerInch = 96
-  TextHeight = 13
+  TextHeight = 19
   object pnlContainer: TPanel
     Left = 0
     Top = 0
@@ -25,10 +25,6 @@ object PageCadastroCliente: TPageCadastroCliente
     Color = clWhite
     ParentBackground = False
     TabOrder = 0
-    ExplicitLeft = 176
-    ExplicitTop = 216
-    ExplicitWidth = 185
-    ExplicitHeight = 41
     object pnlTop: TPanel
       Left = 0
       Top = 0
@@ -57,7 +53,6 @@ object PageCadastroCliente: TPageCadastroCliente
           Align = alRight
           BevelOuter = bvNone
           TabOrder = 0
-          ExplicitLeft = 50
           object Image2: TImage
             AlignWithMargins = True
             Left = 10
@@ -736,7 +731,6 @@ object PageCadastroCliente: TPageCadastroCliente
           Align = alRight
           BevelOuter = bvNone
           TabOrder = 1
-          ExplicitLeft = 50
           object Image1: TImage
             AlignWithMargins = True
             Left = 10
@@ -1018,145 +1012,505 @@ object PageCadastroCliente: TPageCadastroCliente
         end
       end
     end
-    object pnlCadastros: TFlowPanel
+    object pnlLeftContainer: TPanel
       Left = 0
       Top = 73
-      Width = 728
+      Width = 185
+      Height = 500
+      Align = alLeft
+      BevelOuter = bvNone
+      TabOrder = 1
+      object pnlImgUser: TPanel
+        Left = 0
+        Top = 5
+        Width = 185
+        Height = 185
+        BevelOuter = bvNone
+        Padding.Left = 10
+        Padding.Top = 10
+        Padding.Right = 10
+        Padding.Bottom = 10
+        TabOrder = 0
+        object imgNouser: TImage
+          Left = 10
+          Top = 10
+          Width = 165
+          Height = 165
+          Align = alClient
+          Picture.Data = {
+            0954506E67496D61676589504E470D0A1A0A0000000D49484452000002000000
+            020004030000000656C9C90000000C504C5445C5C5C5FFFFFFE9E9E9D6D6D6C0
+            9A207000000AF84944415478DAED9D616E14571084D7F837E0F5018C38018AB9
+            FF1122E502082E10960B4444B30BAC1312A6BB5F55F76BBFAA9FD166D4F3F1AA
+            BA673CF3E6E6B0B86EAA0BA896005417502D01A82EA05A02505D40B504A0BA80
+            6A09407501D51280EA02AA2500D505544B00AA0BA896005417502D01A82EA05A
+            02505D40B504A0BA806A09407501D51280EA02AA2500D505544B00AA0BA89600
+            5417502D01A82EA05A02505D40B504A0BA806A09407501D51280EA02AA2500D5
+            05544B00AA0BA896005417502D01A82EA05A02505D40B504A0BA806A09407501
+            D51280EA02AA2500D505544B00AA0BA896005417502D01A82EA05A02505D40B5
+            04A0BA806A09407501D51280EA02AA2500D505544B00AA0BA896005417502D01
+            A82EA05A02505D40B504A0BA806A09407501D51280EA02AA5507E0FDD72F87D3
+            A586BBC3F1AF3FD602F0FE74FA7721C797250C2A00DCBE39FDE77FBF397E5801
+            C0FF9D7E11826C00B7EF3EFEBA9EB7BF3F6B008FA72F7B3F39BE4ACD825400BF
+            5AFD4F4A4AF5412680F79F77FFF92FBA4F6C0889001E3F9A7F7AF39046200F80
+            E3FC33096401B0D9FF495D59419004E0F6C168FFABEE7308E400089C7F16811C
+            006F03E77F38BCFEF45C00B8F2EF496D194998012078FE3904120084CF3F8500
+            1FC0EDAB81FFF9C59FED01841AC055F4564007106B0057B15B011BC040007C2B
+            901C036400430170113906C800460DB0896B022E8061039C4BA49A800A006080
+            4D54135001200CB089690226008801CE45124D40043038023D15711C2202802D
+            00EA12E0010025E045BC1CE401F8ED13F2686F584B800600BA00884B800600D5
+            02BF8BD50A59005EBC4617FAB91700F402A02D01120070026C22A5000900B605
+            5CC469041C008405C05A021C008C05405A021400C0AB80A7A25C11500000AF02
+            FE512BE38A800200DF032F6274420600F810F4A358C230C400C089C04D841824
+            00A0F4C08B089D900080E6008A0708005811B8091F8378004407303C8007C08B
+            C04DF018C403603A80E001380062049EEB45C7201C00D701780FC001701D80F7
+            001A00B5076C42F7013400B603E01E4003603B00EE013000BA03E01E00032037
+            C173C5D8460806C08F0074088001F023001D025800090E407B000B20C301600F
+            6001643800EC0128808426B809DA08A1005222001C0250003911800D0128809C
+            08C086800000EB4ACA406C0A220124652036059100B232109A8248005911000D
+            012080B4088086800000ABCACA40680A0201E4652032058100F2321099820200
+            AB29310391298803909881C8141400584D994D00D80604005652661300B6011C
+            8063E6F91FBEA270C300A47641601F8401486D02C0362000B08AEE52011C7C9B
+            D32500C8ED82B83E080390DB05717D50005005E58E01B841400040F524CF41B8
+            49480050F5E4CE41B849480050F5240F82B051500040E5644FC2B05958000400
+            A3EC4B01D8C58000088000080042D957C3B0EB61011000011000011000011000
+            011000011080112D7F3528000220006B0358FEEF0202B03A80E5FF3ABC3C80E5
+            9F10591EC0F24F892D0F60F927450560F9A7C59707B0FC1B23CBBF33B4FC5B63
+            CB0358FECDD1E5DF1DD6DBE3CBEF1FB03C80E5F710591EC0F2FB082DBF939400
+            2CBF9BDCF2FB092EBFA3E4F20096DF5556FB0A2FBFB3F4F27B8B2FBFBBBC002C
+            FF8589E5BF31B2FC576696FFCE90BE34B5FCB7C696FFDA9CBE37B8FC172797FF
+            E6E8F25F9DD5778797FFF2F4F2DF1ED7D7E7C98D10DC040900C81E403B800080
+            EB01B4030800A87D00DD031800A81E803B8001801883F008A400207A00EF0006
+            00620CC223900380E601820328006831888F401280C78F94F3BF79C03B8003E0
+            F681B204EE3F100E4A01408A414204B200503A21A107D2005096006501B00010
+            96006701B000103A21A3071201C08721C610C404005F02A405C003004E015202
+            1001801B01A70550014097006D01100120AF082857017400C02B02CA55001D00
+            6E091017001500AC15B25A201D0028077909C806803101D3006C001013300D40
+            07003001D5007400E326E01A800F60D8045C032400181C878823501280B11820
+            07400A8091186007400E80388184F34F0110259071FE390082AD80DD00D200DC
+            BE8BAD80FB97CF6305C41BE1F3C880C7537C10B839B2C7003E80C159B8FB2074
+            FB6674DFBFE3ABCED70288DB82E420E0DE1182DC16ED7B4304755B984AA0C56D
+            F19E7785910F0A75FCC308F641291E011600F483623402AC4764E00FCAB10890
+            9E12233C284822D0E839C1468FC9911E956DF3A428E9FC39047ABD30D1E27D01
+            D293D2976AF141D8ECBD41FCD3827000B400B8081E036800F42D24267F799A19
+            00DF0A06C740BF4D54A6DE42831C0017616300BB9718DD00E792A126E8B89FE0
+            B4BBC9A5186013D204C87D85530C702E1A68829E7B8B4FB9B172EA071626DC5D
+            3ECF00E7B261268001484BC08B6039D8F6939BB37D6D2EFDCBD3937D7334FDAB
+            BBB37D7D3EFB7B9307D83C8801909C80176172100220B705FE281DD20A21004A
+            160068092000D42C00D0124000285A0098250000903E035D0598860000D267A0
+            AB00D3D03880C205805802E3000A170062090C03285D008025300CA074010096
+            C02880AA19E047FDA3B3C02880B219E0BB4667814100D50B607C090C02285F00
+            C34B601040C17D809FCE60ECBEC01880821B413F6BECD6D018800916C0E81218
+            0230C502185C0243008A87A0EF1A1A864600144FC1578DCCC3230026E881178D
+            74C211005344E0F92406627000C02411B869200607004CB3008696401CC03411
+            B8291E83710093F4C08BE29D300E6022078C78200C60A208DC148EC13080A91C
+            30E0812880A92270533406A300267340DC0351005345E0F94482311804309D03
+            C21E0802982C023705633008603A07843D1003305D046E8AC5600CC0840E887A
+            2006604207443D100230A503821E080198D201410F84004CE980A00722002675
+            40CC031100933A20E6810880491D10F34000C0B40E08792000605A07843C1000
+            30AD03421EF00398F04AF82AFF35B11FC0C4111009013F80891D10F1801BC0D4
+            0E0878C00D606A07043CE006307113DCE46E846E005347402004BC00268F007F
+            0878014C1E01FE10F00298DC017E0F38014CEF00B7079C00A67780DB034E0093
+            37C14DCE46E804307D04B843C007A041047843C007A041047843C007A0410478
+            43C007A041047843C005A045043843C005A045043843C005A045043843C005A0
+            45043843C003A04904F842C003A04904F842C003A04904F842C003A04904F842
+            4000EC3F6D9381AE147400689381AE147400689381AE147400681301AE10B003
+            6814019E10B0036814019E101000F3311B65A02705ED001A65A02705CD005A65
+            A02305CD005A4580230404C07AC45619E8484133805619E848412B806619684F
+            4101301EAF5906DA53D00AA05906DA53D00AA05906DA5350006C3F6B9781E614
+            3402689781E6141400DBD1DA3501731B3002689781E6141400D3AF1A36016B1B
+            B001689881D6141400D3B11A36016B1B1000D3B11A36016B1BB00138569F4C48
+            271880965DD0D8074D005A3601631B1000CB915A3601631B1000CB915A764163
+            1F1400C36F9A76415B1F1400C3719A76415B1F1400C3719A76415B1F1400C371
+            9A76415B1F1400C3717ADE0DD864B8236000D0760C300D0202B07F94B6638069
+            101080FDA3DCDC559F47585FF7FB970140DB39C8340909C0FE51DACE41A64948
+            00F68FD27710B48C82FB001ACF4196494800768FD1780EB24C42022000BBBFE8
+            3B095B66E17D008D0741CB28280002B0A7C693B06516160001D853E76B21C3D5
+            9000ECFDA0F5B590E16A4800046047ADAF850C574302200002B0F383CEB7030C
+            370404400076D4FA7680E1868000088000FC5AADEF8718EE8808C0EA00FE06BC
+            9FB31F6148E1670000000049454E44AE426082}
+          Stretch = True
+          ExplicitLeft = 64
+          ExplicitTop = 64
+          ExplicitWidth = 105
+          ExplicitHeight = 105
+        end
+        object btnBuscarImagem: TSpeedButton
+          Left = 10
+          Top = 10
+          Width = 165
+          Height = 165
+          Align = alClient
+          Flat = True
+          ExplicitLeft = 48
+          ExplicitTop = 72
+          ExplicitWidth = 23
+          ExplicitHeight = 22
+        end
+      end
+    end
+    object pnlCadastro: TStackPanel
+      Left = 185
+      Top = 73
+      Width = 543
       Height = 500
       Align = alClient
       BevelOuter = bvNone
-      Padding.Left = 10
+      ControlCollection = <
+        item
+          Control = Panel1
+        end
+        item
+          Control = Panel2
+        end
+        item
+          Control = Panel3
+        end>
+      HorizontalPositioning = sphpFill
+      Padding.Left = 5
       Padding.Top = 5
-      Padding.Right = 10
+      Padding.Right = 5
       Padding.Bottom = 5
-      TabOrder = 1
-      VerticalAlignment = taAlignTop
-      ExplicitLeft = 104
-      ExplicitTop = 200
-      ExplicitWidth = 185
-      ExplicitHeight = 41
-      object pnlLeftContainer: TPanel
-        Left = 10
+      TabOrder = 2
+      VerticalPositioning = spvpFill
+      ExplicitLeft = 191
+      ExplicitTop = 74
+      object Panel1: TPanel
+        Left = 5
         Top = 5
-        Width = 185
-        Height = 484
-        Align = alLeft
+        Width = 533
+        Height = 50
         BevelOuter = bvNone
         TabOrder = 0
-        object pnlImgUser: TPanel
+        object StackPanel1: TStackPanel
           Left = 0
-          Top = 5
-          Width = 185
-          Height = 185
+          Top = 0
+          Width = 377
+          Height = 50
+          Align = alClient
           BevelOuter = bvNone
-          Padding.Left = 10
-          Padding.Top = 10
-          Padding.Right = 10
-          Padding.Bottom = 10
+          ControlCollection = <
+            item
+              Control = Label1
+            end
+            item
+              Control = edtNome
+            end>
+          HorizontalPositioning = sphpFill
+          Padding.Left = 5
+          Padding.Right = 5
           TabOrder = 0
-          object imgNouser: TImage
-            Left = 10
-            Top = 10
-            Width = 165
-            Height = 165
-            Align = alClient
-            Picture.Data = {
-              0954506E67496D61676589504E470D0A1A0A0000000D49484452000002000000
-              020004030000000656C9C90000000C504C5445C5C5C5FFFFFFE9E9E9D6D6D6C0
-              9A207000000AF84944415478DAED9D616E14571084D7F837E0F5018C38018AB9
-              FF1122E502082E10960B4444B30BAC1312A6BB5F55F76BBFAA9FD166D4F3F1AA
-              BA673CF3E6E6B0B86EAA0BA896005417502D01A82EA05A02505D40B504A0BA80
-              6A09407501D51280EA02AA2500D505544B00AA0BA896005417502D01A82EA05A
-              02505D40B504A0BA806A09407501D51280EA02AA2500D505544B00AA0BA89600
-              5417502D01A82EA05A02505D40B504A0BA806A09407501D51280EA02AA2500D5
-              05544B00AA0BA896005417502D01A82EA05A02505D40B504A0BA806A09407501
-              D51280EA02AA2500D505544B00AA0BA896005417502D01A82EA05A02505D40B5
-              04A0BA806A09407501D51280EA02AA2500D505544B00AA0BA896005417502D01
-              A82EA05A02505D40B504A0BA806A09407501D51280EA02AA5507E0FDD72F87D3
-              A586BBC3F1AF3FD602F0FE74FA7721C797250C2A00DCBE39FDE77FBF397E5801
-              C0FF9D7E11826C00B7EF3EFEBA9EB7BF3F6B008FA72F7B3F39BE4ACD825400BF
-              5AFD4F4A4AF5412680F79F77FFF92FBA4F6C0889001E3F9A7F7AF39046200F80
-              E3FC33096401B0D9FF495D59419004E0F6C168FFABEE7308E400089C7F16811C
-              006F03E77F38BCFEF45C00B8F2EF496D194998012078FE3904120084CF3F8500
-              1FC0EDAB81FFF9C59FED01841AC055F4564007106B0057B15B011BC040007C2B
-              901C036400430170113906C800460DB0896B022E8061039C4BA49A800A006080
-              4D54135001200CB089690226008801CE45124D40043038023D15711C2202802D
-              00EA12E0010025E045BC1CE401F8ED13F2686F584B800600BA00884B800600D5
-              02BF8BD50A59005EBC4617FAB91700F402A02D01120070026C22A5000900B605
-              5CC469041C008405C05A021C008C05405A021400C0AB80A7A25C11500000AF02
-              FE512BE38A800200DF032F6274420600F810F4A358C230C400C089C04D841824
-              00A0F4C08B089D900080E6008A0708005811B8091F8378004407303C8007C08B
-              C04DF018C403603A80E001380062049EEB45C7201C00D701780FC001701D80F7
-              001A00B5076C42F7013400B603E01E4003603B00EE013000BA03E01E00032037
-              C173C5D8460806C08F0074088001F023001D025800090E407B000B20C301600F
-              6001643800EC0128808426B809DA08A1005222001C0250003911800D0128809C
-              08C086800000EB4ACA406C0A220124652036059100B232109A8248005911000D
-              012080B4088086800000ABCACA40680A0201E4652032058100F2321099820200
-              AB29310391298803909881C8141400584D994D00D80604005652661300B6011C
-              8063E6F91FBEA270C300A47641601F8401486D02C0362000B08AEE52011C7C9B
-              D32500C8ED82B83E080390DB05717D50005005E58E01B841400040F524CF41B8
-              49480050F5E4CE41B849480050F5240F82B051500040E5644FC2B05958000400
-              A3EC4B01D8C58000088000080042D957C3B0EB61011000011000011000011000
-              011000011080112D7F3528000220006B0358FEEF0202B03A80E5FF3ABC3C80E5
-              9F10591EC0F24F892D0F60F927450560F9A7C59707B0FC1B23CBBF33B4FC5B63
-              CB0358FECDD1E5DF1DD6DBE3CBEF1FB03C80E5F710591EC0F2FB082DBF939400
-              2CBF9BDCF2FB092EBFA3E4F20096DF5556FB0A2FBFB3F4F27B8B2FBFBBBC002C
-              FF8589E5BF31B2FC576696FFCE90BE34B5FCB7C696FFDA9CBE37B8FC172797FF
-              E6E8F25F9DD5778797FFF2F4F2DF1ED7D7E7C98D10DC040900C81E403B800080
-              EB01B4030800A87D00DD031800A81E803B8001801883F008A400207A00EF0006
-              00620CC223900380E601820328006831888F401280C78F94F3BF79C03B8003E0
-              F681B204EE3F100E4A01408A414204B200503A21A107D2005096006501B00010
-              96006701B000103A21A3071201C08721C610C404005F02A405C003004E015202
-              1001801B01A70550014097006D01100120AF082857017400C02B02CA55001D00
-              6E091017001500AC15B25A201D0028077909C806803101D3006C001013300D40
-              07003001D5007400E326E01A800F60D8045C032400181C878823501280B11820
-              07400A8091186007400E80388184F34F0110259071FE390082AD80DD00D200DC
-              BE8BAD80FB97CF6305C41BE1F3C880C7537C10B839B2C7003E80C159B8FB2074
-              FB6674DFBFE3ABCED70288DB82E420E0DE1182DC16ED7B4304755B984AA0C56D
-              F19E7785910F0A75FCC308F641291E011600F483623402AC4764E00FCAB10890
-              9E12233C284822D0E839C1468FC9911E956DF3A428E9FC39047ABD30D1E27D01
-              D293D2976AF141D8ECBD41FCD3827000B400B8081E036800F42D24267F799A19
-              00DF0A06C740BF4D54A6DE42831C0017616300BB9718DD00E792A126E8B89FE0
-              B4BBC9A5186013D204C87D85530C702E1A68829E7B8B4FB9B172EA071626DC5D
-              3ECF00E7B261268001484BC08B6039D8F6939BB37D6D2EFDCBD3937D7334FDAB
-              BBB37D7D3EFB7B9307D83C8801909C80176172100220B705FE281DD20A21004A
-              160068092000D42C00D0124000285A0098250000903E035D0598860000D267A0
-              AB00D3D03880C205805802E3000A170062090C03285D008025300CA074010096
-              C02880AA19E047FDA3B3C02880B219E0BB4667814100D50B607C090C02285F00
-              C34B601040C17D809FCE60ECBEC01880821B413F6BECD6D018800916C0E81218
-              0230C502185C0243008A87A0EF1A1A864600144FC1578DCCC3230026E881178D
-              74C211005344E0F92406627000C02411B869200607004CB3008696401CC03411
-              B8291E83710093F4C08BE29D300E6022078C78200C60A208DC148EC13080A91C
-              30E0812880A92270533406A300267340DC0351005345E0F94482311804309D03
-              C21E0802982C023705633008603A07843D1003305D046E8AC5600CC0840E887A
-              2006604207443D100230A503821E080198D201410F84004CE980A00722002675
-              40CC031100933A20E6810880491D10F34000C0B40E08792000605A07843C1000
-              30AD03421EF00398F04AF82AFF35B11FC0C4111009013F80891D10F1801BC0D4
-              0E0878C00D606A07043CE006307113DCE46E846E005347402004BC00268F007F
-              0878014C1E01FE10F00298DC017E0F38014CEF00B7079C00A67780DB034E0093
-              37C14DCE46E804307D04B843C007A041047843C007A041047843C007A0410478
-              43C007A041047843C005A045043843C005A045043843C005A045043843C005A0
-              45043843C003A04904F842C003A04904F842C003A04904F842C003A04904F842
-              4000EC3F6D9381AE147400689381AE147400689381AE147400681301AE10B003
-              6814019E10B0036814019E101000F3311B65A02705ED001A65A02705CD005A65
-              A02305CD005A4580230404C07AC45619E8484133805619E848412B806619684F
-              4101301EAF5906DA53D00AA05906DA53D00AA05906DA5350006C3F6B9781E614
-              3402689781E6141400DBD1DA3501731B3002689781E6141400D3AF1A36016B1B
-              B001689881D6141400D3B11A36016B1B1000D3B11A36016B1BB00138569F4C48
-              271880965DD0D8074D005A3601631B1000CB915A3601631B1000CB915A764163
-              1F1400C36F9A76415B1F1400C3719A76415B1F1400C3719A76415B1F1400C371
-              9A76415B1F1400C3717ADE0DD864B8236000D0760C300D0202B07F94B6638069
-              101080FDA3DCDC559F47585FF7FB970140DB39C8340909C0FE51DACE41A64948
-              00F68FD27710B48C82FB001ACF4196494800768FD1780EB24C42022000BBBFE8
-              3B095B66E17D008D0741CB28280002B0A7C693B06516160001D853E76B21C3D5
-              9000ECFDA0F5B590E16A4800046047ADAF850C574302200002B0F383CEB7030C
-              370404400076D4FA7680E1868000088000FC5AADEF8718EE8808C0EA00FE06BC
-              9FB31F6148E1670000000049454E44AE426082}
-            Stretch = True
-            ExplicitLeft = 64
-            ExplicitTop = 64
-            ExplicitWidth = 105
-            ExplicitHeight = 105
+          VerticalPositioning = spvpFill
+          ExplicitHeight = 68
+          object Label1: TLabel
+            Left = 5
+            Top = 0
+            Width = 367
+            Height = 19
+            Caption = 'Nome'
+          end
+          object edtNome: TEdit
+            Left = 5
+            Top = 21
+            Width = 367
+            Height = 27
+            TabOrder = 0
+          end
+        end
+        object StackPanel2: TStackPanel
+          Left = 377
+          Top = 0
+          Width = 156
+          Height = 50
+          Align = alRight
+          BevelOuter = bvNone
+          ControlCollection = <
+            item
+              Control = Label2
+            end
+            item
+              Control = edtNascimento
+            end>
+          HorizontalPositioning = sphpFill
+          TabOrder = 1
+          VerticalPositioning = spvpFill
+          ExplicitLeft = 313
+          ExplicitTop = 1
+          ExplicitWidth = 185
+          ExplicitHeight = 68
+          object Label2: TLabel
+            Left = 0
+            Top = 0
+            Width = 156
+            Height = 19
+            Caption = 'Data nascimento'
+          end
+          object edtNascimento: TDateTimePicker
+            Left = 0
+            Top = 21
+            Width = 156
+            Height = 27
+            Date = 44602.000000000000000000
+            Time = 0.471397615743626400
+            TabOrder = 0
+          end
+        end
+      end
+      object Panel2: TPanel
+        Left = 5
+        Top = 57
+        Width = 533
+        Height = 50
+        BevelOuter = bvNone
+        TabOrder = 1
+        object StackPanel3: TStackPanel
+          Left = 121
+          Top = 0
+          Width = 312
+          Height = 50
+          Align = alClient
+          BevelOuter = bvNone
+          ControlCollection = <
+            item
+              Control = Label3
+            end
+            item
+              Control = edtLogradouro
+            end>
+          HorizontalPositioning = sphpFill
+          Padding.Right = 5
+          TabOrder = 0
+          VerticalPositioning = spvpFill
+          ExplicitHeight = 40
+          object Label3: TLabel
+            Left = 0
+            Top = 0
+            Width = 307
+            Height = 19
+            Caption = 'Logradouro'
+          end
+          object edtLogradouro: TEdit
+            Left = 0
+            Top = 21
+            Width = 307
+            Height = 27
+            TabOrder = 0
+          end
+        end
+        object StackPanel4: TStackPanel
+          Left = 433
+          Top = 0
+          Width = 100
+          Height = 50
+          Align = alRight
+          BevelOuter = bvNone
+          ControlCollection = <
+            item
+              Control = Label4
+            end
+            item
+              Control = edtNumero
+            end>
+          HorizontalPositioning = sphpFill
+          TabOrder = 1
+          VerticalPositioning = spvpFill
+          ExplicitLeft = 154
+          ExplicitWidth = 380
+          ExplicitHeight = 40
+          object Label4: TLabel
+            Left = 0
+            Top = 0
+            Width = 100
+            Height = 19
+            Caption = 'N'#250'mero'
+          end
+          object edtNumero: TEdit
+            Left = 0
+            Top = 21
+            Width = 100
+            Height = 27
+            TabOrder = 0
+          end
+        end
+        object StackPanel5: TStackPanel
+          Left = 0
+          Top = 0
+          Width = 121
+          Height = 50
+          Align = alLeft
+          BevelOuter = bvNone
+          ControlCollection = <
+            item
+              Control = Label5
+            end
+            item
+              Control = edtCep
+            end>
+          HorizontalPositioning = sphpFill
+          Padding.Left = 5
+          Padding.Right = 5
+          TabOrder = 2
+          VerticalPositioning = spvpFill
+          ExplicitHeight = 40
+          object Label5: TLabel
+            Left = 5
+            Top = 0
+            Width = 111
+            Height = 19
+            Caption = 'Cep'
+          end
+          object edtCep: TEdit
+            Left = 5
+            Top = 21
+            Width = 111
+            Height = 27
+            TabOrder = 0
+          end
+        end
+      end
+      object Panel3: TPanel
+        Left = 5
+        Top = 109
+        Width = 533
+        Height = 50
+        BevelOuter = bvNone
+        TabOrder = 2
+        object StackPanel6: TStackPanel
+          Left = 297
+          Top = 0
+          Width = 183
+          Height = 50
+          Align = alClient
+          BevelOuter = bvNone
+          ControlCollection = <
+            item
+              Control = Label6
+            end
+            item
+              Control = edtCidade
+            end>
+          HorizontalPositioning = sphpFill
+          Padding.Right = 5
+          TabOrder = 0
+          VerticalPositioning = spvpFill
+          ExplicitLeft = 153
+          ExplicitWidth = 144
+          ExplicitHeight = 40
+          object Label6: TLabel
+            Left = 0
+            Top = 0
+            Width = 178
+            Height = 19
+            Caption = 'Cidade'
+          end
+          object edtCidade: TEdit
+            Left = 0
+            Top = 21
+            Width = 178
+            Height = 27
+            TabOrder = 0
+          end
+        end
+        object StackPanel7: TStackPanel
+          Left = 0
+          Top = 0
+          Width = 153
+          Height = 50
+          Align = alLeft
+          BevelOuter = bvNone
+          ControlCollection = <
+            item
+              Control = Label7
+            end
+            item
+              Control = edtComplemento
+            end>
+          HorizontalPositioning = sphpFill
+          Padding.Left = 5
+          Padding.Right = 5
+          TabOrder = 1
+          VerticalPositioning = spvpFill
+          ExplicitHeight = 40
+          object Label7: TLabel
+            Left = 5
+            Top = 0
+            Width = 143
+            Height = 19
+            Caption = 'Complemento'
+          end
+          object edtComplemento: TEdit
+            Left = 5
+            Top = 21
+            Width = 143
+            Height = 27
+            TabOrder = 0
+          end
+        end
+        object StackPanel8: TStackPanel
+          Left = 153
+          Top = 0
+          Width = 144
+          Height = 50
+          Align = alLeft
+          BevelOuter = bvNone
+          ControlCollection = <
+            item
+              Control = Label8
+            end
+            item
+              Control = edtBairro
+            end>
+          HorizontalPositioning = sphpFill
+          Padding.Right = 5
+          TabOrder = 2
+          VerticalPositioning = spvpFill
+          ExplicitHeight = 40
+          object Label8: TLabel
+            Left = 0
+            Top = 0
+            Width = 139
+            Height = 19
+            Caption = 'Bairro'
+          end
+          object edtBairro: TEdit
+            Left = 0
+            Top = 21
+            Width = 139
+            Height = 27
+            TabOrder = 0
+          end
+        end
+        object StackPanel9: TStackPanel
+          Left = 480
+          Top = 0
+          Width = 53
+          Height = 50
+          Align = alRight
+          BevelOuter = bvNone
+          ControlCollection = <
+            item
+              Control = Label9
+            end
+            item
+              Control = cbUf
+            end>
+          HorizontalPositioning = sphpFill
+          TabOrder = 3
+          VerticalPositioning = spvpFill
+          ExplicitHeight = 40
+          object Label9: TLabel
+            Left = 0
+            Top = 0
+            Width = 53
+            Height = 19
+            Caption = 'Uf'
+          end
+          object cbUf: TComboBox
+            Left = 0
+            Top = 21
+            Width = 53
+            Height = 27
+            TabOrder = 0
           end
         end
       end

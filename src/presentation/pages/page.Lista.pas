@@ -1,4 +1,4 @@
-unit view.ListaClientes;
+unit page.Lista;
 
 interface
 

@@ -1,12 +1,12 @@
-unit view.router;
+unit router;
 
 interface
 
 uses
   Router4D,
-  view.home,
-  view.ListaClientes,
-  view.CadastroCliente;
+  page.home,
+  page.Lista,
+  page.Cadastro;
 
 type
   TRouters = class

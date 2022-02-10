@@ -1,4 +1,4 @@
-unit view.home;
+unit page.home;
 
 interface
 

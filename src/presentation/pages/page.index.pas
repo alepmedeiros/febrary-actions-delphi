@@ -1,4 +1,4 @@
-unit view.principal;
+unit page.index;
 
 interface
 
@@ -22,7 +22,7 @@ uses
   System.ImageList,
   Vcl.ImgList,
   Router4D,
-  view.home;
+  page.home;
 
 type
   TPageIndex = class(TForm)

@@ -3,10 +3,10 @@
         <ProjectGuid>{F6DFF252-B5AD-4DF4-8DFF-3402CAE403C6}</ProjectGuid>
     </PropertyGroup>
     <ItemGroup>
-        <Projects Include="src\application\sistemagenerico.dproj">
+        <Projects Include="test\sistemagenrico.test.dproj">
             <Dependencies/>
         </Projects>
-        <Projects Include="test\sistemagenrico.test.dproj">
+        <Projects Include="sistemagenerico.dproj">
             <Dependencies/>
         </Projects>
     </ItemGroup>
@@ -17,15 +17,6 @@
             <Default.Personality/>
         </BorlandProject>
     </ProjectExtensions>
-    <Target Name="sistemagenerico">
-        <MSBuild Projects="src\application\sistemagenerico.dproj"/>
-    </Target>
-    <Target Name="sistemagenerico:Clean">
-        <MSBuild Projects="src\application\sistemagenerico.dproj" Targets="Clean"/>
-    </Target>
-    <Target Name="sistemagenerico:Make">
-        <MSBuild Projects="src\application\sistemagenerico.dproj" Targets="Make"/>
-    </Target>
     <Target Name="sistemagenrico_test">
         <MSBuild Projects="test\sistemagenrico.test.dproj"/>
     </Target>
@@ -35,14 +26,23 @@
     <Target Name="sistemagenrico_test:Make">
         <MSBuild Projects="test\sistemagenrico.test.dproj" Targets="Make"/>
     </Target>
+    <Target Name="sistemagenerico">
+        <MSBuild Projects="sistemagenerico.dproj"/>
+    </Target>
+    <Target Name="sistemagenerico:Clean">
+        <MSBuild Projects="sistemagenerico.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="sistemagenerico:Make">
+        <MSBuild Projects="sistemagenerico.dproj" Targets="Make"/>
+    </Target>
     <Target Name="Build">
-        <CallTarget Targets="sistemagenerico;sistemagenrico_test"/>
+        <CallTarget Targets="sistemagenrico_test;sistemagenerico"/>
     </Target>
     <Target Name="Clean">
-        <CallTarget Targets="sistemagenerico:Clean;sistemagenrico_test:Clean"/>
+        <CallTarget Targets="sistemagenrico_test:Clean;sistemagenerico:Clean"/>
     </Target>
     <Target Name="Make">
-        <CallTarget Targets="sistemagenerico:Make;sistemagenrico_test:Make"/>
+        <CallTarget Targets="sistemagenrico_test:Make;sistemagenerico:Make"/>
     </Target>
     <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
 </Project>
